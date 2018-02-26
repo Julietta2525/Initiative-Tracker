@@ -9,22 +9,34 @@
     <body>
         <div id="headButtons" class="headButtons">
             <div id="newPlayerButton" class="newPlayer">
+                <div class="topButtonText">New Player</div>
                 <button type="button" class="newPlayerButton" />
-                <img src="Icons/topButtons.png" alt="New Player"/>
             </div>
 
             <div id="orderList" class="orderCharacters">
+                <div class="topButtonText">Order Players</div>
                 <button type="button" class="orderNames" />
-                <img src="Icons/topButtons.png" alt="Order Characters"/>
+            </div>
+
+            <div class="nextPlayer">
+                <div class="arrowTextNext">Next Player</div>
+                <button type="button" class="nextArrow" />
+            </div>
+
+            <div class="prevPlayer">
+                    <div class="arrowTextPrev">Prev Player</div>
+                    <button type="button" class="prevArrow" />
             </div>
         </div>
 
         <div id="characterList" class="characterList">
             <div class="characterCard">
                 <div class="characterName">
-                    <img class="cardImage" src="Icons/characterBox.png"/>
-                    <input type="text" name="characterName"/>
-
+                    <div class="cardImage">
+                        <div class="nameDisplay">Character Name</div>
+                        <input class="nameInput" type="text" name="characterName"/>
+                    </div>
+                    
                     <div class="confirmButton">
                             <button type="button" name="confirm" />
                             <img class="checkMark" src="Icons/checkSymbol.png" />

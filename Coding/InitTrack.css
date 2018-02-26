@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     background: lightslategray;
 }
 
@@ -12,46 +14,123 @@ button {
 }
 
 .headButtons {
-    border: solid 2px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    position: relative;
+    border: 2px solid;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 75%;
-}
-
-.newPlayer:hover {
-    background-color: darkorange;
+    margin: 5px auto 5px auto;
+    max-width: 50%;
+    padding: 20px 0 55px 0;
 }
 
 .newPlayer {
-    display: inline;
+    position: absolute;
+    left: 5%;
 }
 
 .orderCharacters {
-   display: inline;
+    position: absolute;
+    left: 30%;
 }
 
-.orderNames {
-    color: none;
+.topButtonText {
+    display: inline;
+    background: url("Icons/topButtons.png") no-repeat;
+    background-size: 200px 100px;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.topButtonText:hover {
+    display: inline;
+    background: url("Icons/topButtonHover.png") no-repeat;
+    margin: auto;
+}
+
+.nextPlayer {
+    position: absolute;
+    left: 80%;
+}
+
+.arrowTextNext {
+    display: inline;
+    background: url("Icons/nextArrow.png") no-repeat;
+    font-family: Trebuchet MS;
+    font-size: 25px;
+    background-size: 150px 50px;
+    padding: 15px 15px 15px 15px;
+    text-align: center;
+    margin: auto;
+    color: black;
+}
+
+.arrowTextNext:hover {
+    display: inline;
+    background: url("Icons/nextArrowHover.png") no-repeat;
+    font-size: 25px;
+    background-size: 150px 50px;
+    margin: auto; 
+    color: white;
+}
+
+.prevPlayer {
+    position: absolute;
+    left: 55%;
+}
+
+.arrowTextPrev {
+    display: inline;
+    background: url("Icons/prevArrow.png") no-repeat;
+    background-size: 150px 50px;
+    font-family: Trebuchet MS;
+    font-size: 25px;
+    padding: 15px 15px 15px 15px;
+    text-align: center;
+    margin: auto;
+    color: black;
+}
+
+.arrowTextPrev:hover {
+    display: inline;
+    background: url("Icons/prevArrowHover.png") no-repeat;
+    background-size: 150px 50px;
+    font-size: 25px;
+    margin: auto; 
+    color: white;
 }
 
 .characterList {
+    position: relative;
     border: solid 2px;
     max-width: 75%;
-    padding-top: 15px;
-    margin-left: 25%;
-    margin-right: 25%;
-}
-
-.characterCard {
-    margin: auto;
+    padding: 15px 15px 15px 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cardImage {
     display: block;
-    max-width: 95%;
+    position: relative;
+    border: 3px solid;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url("Icons/characterBox.png") no-repeat;
+    background-size: 100%;
+}
+
+.nameDisplay {
+    font-family: trebuchet ms;
+    font-size: 25px;
+    text-align: center;
+}
+
+.nameInput {
+    position: relative;
+    display: block;
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
