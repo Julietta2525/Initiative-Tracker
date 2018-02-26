@@ -1,6 +1,51 @@
 <! DOCTYPE HTML>
 <html>
     <head>
-            <link rel="stylesheet" type="text/css" href="InitTrack.css">
-            <script> src="InitTrack.js" </script>
+        <title>Init 73</title>
+        <link rel="stylesheet" type="text/css" href="InitTrack.css">
+        <script src="InitTrack.js"></script>
     </head>
+
+    <body>
+        <div id="headButtons" class="headButtons">
+            <div id="newPlayerButton">
+                <div class="newPlayer">
+                    <img src="Icons/topButtons.png" alt="New Player">
+                        <button type="button" class="newPlayerButton" />
+                    </img>
+                </div>
+
+                <div class="newPlayer">
+                    <img src="Icons/topButtons.png" alt="Order Characters">
+                        <button type="button" class="orderNames" />
+                    </img>
+                </div>
+            </div>
+        </div>
+
+        <div id="characterList" class="characterList">
+            <div class="characterCard">
+                <div class="characterName">
+                    <img class="cardImage" src="Icons/characterBox.png"/>
+                    <input type="text" name="characterName"/>
+
+                    <div class="confirmButton">
+                            <button type="button" name="confirm" />
+                            <img class="checkMark" src="Icons/checkSymbol.png" />
+                        </div>
+        
+                        <div class="cancelButton">
+                            <button type="button" name="cancelName" />
+                            <img class="cancelX" src="Icons/deleteX.png" />
+                        </div>
+        
+                        <div class="deleteCharButton">
+                            <button type="button" name="deleteChar" />
+                            <img class="deleteX" src="Icons/deleteX.png" />
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
