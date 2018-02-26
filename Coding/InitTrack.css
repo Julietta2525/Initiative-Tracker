@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -104,7 +108,7 @@ button {
 .characterList {
     position: relative;
     border: solid 2px;
-    max-width: 75%;
+    max-width: 50%;
     padding: 15px 15px 15px 15px;
     margin-left: auto;
     margin-right: auto;
@@ -115,37 +119,63 @@ button {
     position: relative;
     border: 3px solid;
     width: 500px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
-    background: url("Icons/characterBox.png") no-repeat;
-    background-size: 100%;
+    background-color: lightblue;
+    padding-bottom: 15px;
 }
 
 .nameDisplay {
     font-family: trebuchet ms;
     font-size: 25px;
     text-align: center;
+    padding-top: 15px;
+}
+
+.nameInputContainer {
+    position: relative;
+    margin-bottom: -15;
+    padding-top: 20px;
 }
 
 .nameInput {
     position: relative;
     display: block;
     width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 1px auto;
+    padding: 5px 0 0 0;
 }
 
-.checkMark {
+.confirmButton {
+    position: relative;
+    display: block;
+    right: 15%;
+    bottom: 10px;
+}
+
+.confirmButtonImg {
+    position: relative;
+    float: right;
+    vertical-align: bottom;
     width: 20px;
-    height: 20px;
+    height: 25px; 
 }
 
-.cancelX {
-    width: 20px;
-    height: 20px;
+/*.cancelButton {
+    position: relative;
+    display: block;
+    background: url("Icons/cancelX.png") no-repeat;
+    background-size: 20px 20px;
+    margin-right: 2%;
+    margin-bottom: 1%;
 }
 
-.deleteX {
-    width: 30px;
-    height: 30px;
-}
+.deleteCharButton {
+    position: relative;
+    display: block;
+    background: url("Icons/deleteX.png") no-repeat;
+    background-size: 30px 30px;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}*/
