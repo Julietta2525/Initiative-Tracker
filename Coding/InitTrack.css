@@ -23,86 +23,162 @@ button {
     display: block;
     margin: 5px auto 5px auto;
     max-width: 50%;
-    padding: 20px 0 55px 0;
+    padding: 20px 0 70px 0;
 }
 
 .newPlayer {
     position: absolute;
+    display: inline;
     left: 5%;
+    padding: 10px 10px 10px 10px;
 }
 
 .orderCharacters {
     position: absolute;
+    display: inline;
     left: 30%;
+    padding: 10px 10px 10px 10px;
 }
 
-.topButtonText {
-    display: inline;
-    background: url("Icons/topButtons.png") no-repeat;
-    background-size: 200px 100px;
+a.topButtonText:link {
+    color:black;
+    background-color: yellow;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
     font-family: Trebuchet MS;
     font-size: 30px;
-    padding: 10px 10px 10px 10px;
     text-align: center;
-    margin: auto;
 }
-
-.topButtonText:hover {
-    display: inline;
-    background: url("Icons/topButtonHover.png") no-repeat;
-    margin: auto;
+a.topButtonText:visited {
+    color: black;
+    background-color: yellow;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
+}
+a.topButtonText:hover {
+    color: black;
+    background-color: rgb(197, 197, 67);
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
+}
+a.topButtonText:active {
+    color: black;
+    background-color: yellow;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
 }
 
 .nextPlayer {
     position: absolute;
+    display: inline;
     left: 80%;
+    padding: 15px 15px 15px 15px;
 }
 
-.arrowTextNext {
-    display: inline;
+a.nextPlayerText:link {
+    color: black;
     background: url("Icons/nextArrow.png") no-repeat;
-    font-family: Trebuchet MS;
-    font-size: 25px;
     background-size: 150px 50px;
     padding: 15px 15px 15px 15px;
-    text-align: center;
-    margin: auto;
-    color: black;
-}
-
-.arrowTextNext:hover {
-    display: inline;
-    background: url("Icons/nextArrowHover.png") no-repeat;
+    text-decoration: none;
+    font-family: Trebuchet MS;
     font-size: 25px;
+    text-align: center;
+    white-space: nowrap;
+}
+a.nextPlayerText:visited {
+    color: black;
+    background: url("Icons/nextArrowHover.png") no-repeat;
     background-size: 150px 50px;
-    margin: auto; 
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 25px;
+    text-align: center;
+    white-space: nowrap;
+}
+a.nextPlayerText:hover {
     color: white;
+    background: url("Icons/nextArrow.png") no-repeat;
+    background-size: 150px 50px;
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 25px;
+    text-align: center;
+    white-space: nowrap;
+}
+a.nextPlayerText:active {
+    color: black;
+    background: url("Icons/nextArrow.png") no-repeat;
+    background-size: 150px 50px;
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 25px;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .prevPlayer {
     position: absolute;
+    display: inline;
     left: 55%;
+    padding: 15px 15px 15px 15px;
 }
 
-.arrowTextPrev {
-    display: inline;
+a.prevPlayerText:link {
+    color: black;
     background: url("Icons/prevArrow.png") no-repeat;
     background-size: 150px 50px;
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
     font-family: Trebuchet MS;
     font-size: 25px;
-    padding: 15px 15px 15px 15px;
     text-align: center;
-    margin: auto;
-    color: black;
+    white-space: nowrap;
 }
-
-.arrowTextPrev:hover {
-    display: inline;
+a.prevPlayerText:visited {
+    color: black;
     background: url("Icons/prevArrowHover.png") no-repeat;
     background-size: 150px 50px;
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
     font-size: 25px;
-    margin: auto; 
+    text-align: center;
+    white-space: nowrap;
+}
+a.prevPlayerText:hover {
     color: white;
+    background: url("Icons/prevArrow.png") no-repeat;
+    background-size: 150px 50px;
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 25px;
+    text-align: center;
+    white-space: nowrap;
+}
+a.prevPlayerText:active {
+    color: black;
+    background: url("Icons/prevArrow.png") no-repeat;
+    background-size: 150px 50px;
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 25px;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .characterList {
@@ -147,55 +223,147 @@ button {
     padding: 5px 0 0 0;
 }
 
-.confirmButtonContainer {
+.confirmButton {
     position: relative;
     display: block;
+    float: right;
     right: 15%;
-    bottom: 10px;
+    bottom: 5px;
 }
 
-.confirmButtonImg {
+a.confirmButtonImg:link {
+    color:black;
+    background: url("Icons/checkSymbol.png") no-repeat;
+    background-size: 20px 25px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
+}
+a.confirmButtonImg:visited {
+    color: black;
+    background: url("Icons/checkSymbol.png") no-repeat;
+    background-size: 20px 25px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
+}
+a.confirmButtonImg:hover {
+    color: black;
+    background: url("Icons/checkSymbolHover.png") no-repeat;
+    background-size: 20px 25px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
+}
+a.confirmButtonImg:active {
+    color: black;
+    background: url("Icons/checkSymbol.png") no-repeat;
+    background-size: 20px 25px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
+}
+
+.cancelButton {
     position: relative;
     display: block;
     float: right;
-    width: 20px;
-    height: 25px; 
-    opacity: 1;
+    right: 5%;
+    bottom: 4.5px;
 }
 
-.confirmButtonHov {
-    position: absolute;
-    opacity: 0;
-    transition: .5s ease;
+a.cancelButtonImg:link {
+    color:black;
+    background: url("Icons/deleteX.png") no-repeat;
+    background-size: 20px 25px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
 }
-
-.confirmButtonImgHov {
-    position: block;
-    float: right;
-    width: 20px;
-    height: 25px; 
-    opacity: 0;
-    background: url ("Icons/checkSymbolHover.png") no-repeat;
+a.cancelButtonImg:visited {
+    color: black;
+    background: url("Icons/deleteX.png") no-repeat;
+    background-size: 20px 25px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
 }
-
-.confirmButton:hover .confirmButtonImgHov {
-    opacity: 1;
+a.cancelButtonImg:hover {
+    color: black;
+    background: url("Icons/deleteXHover.png") no-repeat;
+    background-size: 20px 25px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
 }
-
-/*.cancelButton {
-    position: relative;
-    display: block;
-    background: url("Icons/cancelX.png") no-repeat;
-    background-size: 20px 20px;
-    margin-right: 2%;
-    margin-bottom: 1%;
+a.cancelButtonImg:active {
+    color: black;
+    background: url("Icons/deleteX.png") no-repeat;
+    background-size: 20px 25px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
 }
 
 .deleteCharButton {
     position: relative;
     display: block;
+    left: 1%;
+}
+
+a.deleteCharButtonImg:link {
+    color:black;
     background: url("Icons/deleteX.png") no-repeat;
-    background-size: 30px 30px;
-    margin-right: 2%;
-    margin-bottom: 1%;
-}*/
+    background-size: 30px 35px;
+    padding: 70px 20px 0px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
+}
+a.deleteCharButtonImg:visited {
+    color: black;
+    background: url("Icons/deleteX.png") no-repeat;
+    background-size: 30px 35px;
+    padding: 70px 20px 0px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
+}
+a.deleteCharButtonImg:hover {
+    color: black;
+    background: url("Icons/deleteXHover.png") no-repeat;
+    background-size: 30px 35px;
+    padding: 70px 20px 0px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
+}
+a.deleteCharButtonImg:active {
+    color: black;
+    background: url("Icons/deleteX.png") no-repeat;
+    background-size: 30px 35px;
+    padding: 70px 20px 0px 10px;
+    text-decoration: none;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    text-align: center;
+}
