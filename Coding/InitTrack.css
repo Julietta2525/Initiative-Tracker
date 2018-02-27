@@ -147,7 +147,7 @@ button {
     padding: 5px 0 0 0;
 }
 
-.confirmButton {
+.confirmButtonContainer {
     position: relative;
     display: block;
     right: 15%;
@@ -156,10 +156,30 @@ button {
 
 .confirmButtonImg {
     position: relative;
+    display: block;
     float: right;
-    vertical-align: bottom;
     width: 20px;
     height: 25px; 
+    opacity: 1;
+}
+
+.confirmButtonHov {
+    position: absolute;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.confirmButtonImgHov {
+    position: block;
+    float: right;
+    width: 20px;
+    height: 25px; 
+    opacity: 0;
+    background: url ("Icons/checkSymbolHover.png") no-repeat;
+}
+
+.confirmButton:hover .confirmButtonImgHov {
+    opacity: 1;
 }
 
 /*.cancelButton {
