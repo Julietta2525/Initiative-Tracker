@@ -1,13 +1,16 @@
 
-function newPlayerButton () {
-    //var newPlayerCardData = document.getElementById("charCard")
-    var divSeg = document.createElement("div")
-    var newPlayer = document.getElementsByTagName
-    var att = document.createAttribute("class")
-    att.value = "characterCard"
+function loadingStuff () {
+    document.getElementById("nameField").value = '';
 }
 
+function checkButton () {
+    var x = document.getElementById("nameField").value;
+    document.getElementById("slate1").innerHTML = x;
+}
 
+function clearNameInput () {
+    document.getElementById("nameField").value = "";
+}
 
 //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo
 //https://gomakethings.com/adding-a-new-element-to-the-dom-with-vanilla-js/

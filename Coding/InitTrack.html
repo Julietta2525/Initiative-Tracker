@@ -6,20 +6,21 @@
         <script src="InitTrack.js"></script>
     </head>
 
-    <body>
+    <body onload="loadingStuff()">
         <div id="headButtons" class="headButtons">
+        <!-- New Player -->
             <div id="newPlayerButton" class="newPlayer">
                 <a onclick="newPlayerButton()" href="#" class="topButtonText">New Player</a>
             </div>
-
+        <!-- Order the List -->
             <div id="orderList" class="orderCharacters">
                 <a href="#" class="topButtonText">Order Players</a>
             </div>
-
+        <!-- New Player -->
             <div class="nextPlayer">
                 <a href="#" class="nextPlayerText">Next Player</a>
             </div>
-
+        <!-- Previous Player -->
             <div class="prevPlayer">
                 <a href="#" class="prevPlayerText">Prev Player</a>
             </div>
@@ -31,23 +32,19 @@
 
                     <div class="cardImage">
                     <!-- Name Display -->
-                        <div class="nameDisplay">Character Name</div>
-                    
+                        <div id="slate1" class="nameDisplay">Character Name</div>
                     <!-- Input Box -->
                         <div class="nameInputContainer">
-                            <input class="nameInput" type="text" name="characterName"/>
+                            <input id="nameField" class="nameInput" type="text" name="characterName" default=" "/>
                         </div>
-
                     <!-- Confirm Button -->
                         <div class="confirmButton">
-                            <a href="#" class="confirmButtonImg"></a>
+                            <a href="#" onclick="checkButton()" class="confirmButtonImg"></a>
                         </div>
-
                     <!-- Cancel Button -->
                         <div class="cancelButton">
-                            <a href="#" class="cancelButtonImg"></a>
+                            <a href="#" onclick="clearNameInput()" class="cancelButtonImg"></a>
                         </div>
-
                     <!-- Delete Entry Button -->
                         <div class="deleteCharButton">
                             <a href="#" class="deleteCharButtonImg"></a>
