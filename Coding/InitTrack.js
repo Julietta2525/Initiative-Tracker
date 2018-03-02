@@ -4,22 +4,10 @@ function loadingStuff () {
     document.getElementById("nameField").value = '';
 }
 
-//Check Button for Player Name
-//function checkButton () {
-  //  var x = document.getElementById("nameField").value;
-   // var blankName = "Char-acter Name"
-   // if (document.getElementById("nameField")=="") {
-   //     document.getElementById("slate1").innerHTML = blankName;
-   // } else {
-   //     document.getElementById("slate1").innerHTML = x;
-   //     document.getElementById("nameField").value = "";
-   // }
-//}
-
+//Player Name Check button
 function checkButton () {
     var x ;
     var nameInput = document.getElementById("nameField");
-    var blankName = "Character-Name";
     var goodName = document.getElementById("nameField").value;
     
     x = (nameInput == "") ? "Character-Name" : goodName;
@@ -37,12 +25,17 @@ function newPlayerButton() {
     //newPlayerPopup();
 }
 
+
+
 // Create a new character card when clicking New Player
 function newCharacterCard() {
     var origSpan = document.getElementsByTagName("SPAN")[0];
     var cloneSpan = origSpan.cloneNode(true);
     document.getElementById("charList").appendChild(cloneSpan);
-    //document.newSpan.setAttribute("id","slate2");
+    var person = prompt("Please enter new character name", "A Unicorn named Stan");
+    if (person != null) {
+        document.getElementById("slate1").innerHTML = person;
+    }
 }
 
 //New Player Popup Box
