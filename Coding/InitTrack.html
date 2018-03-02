@@ -27,30 +27,22 @@
         </div>
 
         <div id="charList" class="characterList">
-            <span class="characterCard" id="charCard">
-                <div class="characterName">
-                    <div class="cardImage">
-                    <!-- Name Display -->
-                        <div id="slate1" class="nameDisplay">Character Name</div>
-                    <!-- Input Box -->
-                        <div class="nameInputContainer">
-                            <input id="nameField" class="nameInput" type="text" name="characterName" default=" "/>
-                        </div>
-                    <!-- Confirm Button -->
-                        <div class="confirmButton">
-                            <a href="#" onclick="checkButton()" class="confirmButtonImg"></a>
-                        </div>
-                    <!-- Cancel Button -->
-                        <div class="cancelButton">
-                            <a href="#" onclick="clearNameInput()" class="cancelButtonImg"></a>
-                        </div>
-                    <!-- Delete Entry Button -->
-                        <div class="deleteCharButton">
-                            <a href="#" onclick="document.getElementByTagName('charCard').style.display='none'" class="deleteCharButtonImg"></a>
-                        </div>
-                    </div>
-                </div>
-            </span>
+            <ul id="charCard">
+            <!-- Name Display -->
+                <li class="nameDisplay">Character Name</li>
+            <!-- Input Box
+                    <div class="nameInputContainer">
+                        <input id="nameField" class="nameInput" type="text" name="characterName" default=" "/>
+                    </div>-->
+            <!-- Confirm Button
+                    <div class="confirmButton">
+                        <a href="#" onclick="checkButton()" class="confirmButtonImg"></a>
+                    </div>-->
+            <!-- Delete Entry Button
+                    <div class="deleteCharButton">
+                        <a href="#" onclick="document.getElementByTagName('charCard').style.display='none'" class="deleteCharButtonImg"></a>
+                    </div> -->
+            </ul>
         </div>
 
     </body>
