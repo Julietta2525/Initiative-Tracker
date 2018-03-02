@@ -5,9 +5,26 @@ function loadingStuff () {
 }
 
 //Check Button for Player Name
+//function checkButton () {
+  //  var x = document.getElementById("nameField").value;
+   // var blankName = "Char-acter Name"
+   // if (document.getElementById("nameField")=="") {
+   //     document.getElementById("slate1").innerHTML = blankName;
+   // } else {
+   //     document.getElementById("slate1").innerHTML = x;
+   //     document.getElementById("nameField").value = "";
+   // }
+//}
+
 function checkButton () {
-    var x = document.getElementById("nameField").value;
+    var x ;
+    var nameInput = document.getElementById("nameField");
+    var blankName = "Character-Name";
+    var goodName = document.getElementById("nameField").value;
+    
+    x = (nameInput == "") ? "Character-Name" : goodName;
     document.getElementById("slate1").innerHTML = x;
+    document.getElementById("nameField").value = "";
 }
 
 //Clear the Player Name input box
@@ -15,10 +32,22 @@ function clearNameInput () {
     document.getElementById("nameField").value = "";
 }
 
+function newPlayerButton() {
+    newCharacterCard();
+    //newPlayerPopup();
+}
+
+// Create a new character card when clicking New Player
+function newCharacterCard() {
+    var origSpan = document.getElementsByTagName("SPAN")[0];
+    var cloneSpan = origSpan.cloneNode(true);
+    document.getElementById("charList").appendChild(cloneSpan);
+    //document.newSpan.setAttribute("id","slate2");
+}
+
 //New Player Popup Box
 function newPlayerPopup() {
-    newCharacterCard()
-    var person = prompt("Please enter character name", "Frodo Baggins");
+    var person = prompt("Please enter new character name", "A Unicorn named Stan");
     if (person != null) {
         document.getElementById("slate1").innerHTML = person;
     }
@@ -45,11 +74,7 @@ for (i =  0; i < close.length; i++) {
   }
 }
 
-// Create a new list item when clicking on the "Add" button
-function newCharacterCard() {
-  var div = document.createElement("div");
 
-} 
 
 
 //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo
