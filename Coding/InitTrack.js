@@ -1,12 +1,14 @@
 function loadingStuff () {
     addCloseButtons();
-    //addEditPencil();
 }
 
 function newPlayerButton() {
     newCharLine();
     addCloseButtons();
-    //addEditPencil();
+}
+
+function addEditButton () {
+    var ul = document.getElementById
 }
 
 function addCloseButtons() {
@@ -31,16 +33,6 @@ function addCloseButtons() {
     }
 }
 
-function addEditPencil () {
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-}
-
 // Create a new list item when clicking on the "Add" button
 function newCharLine(){
     var li = document.createElement("li");
@@ -48,9 +40,11 @@ function newCharLine(){
     var t = document.createTextNode(inputValue);
     li.appendChild(t);
     if (inputValue === '') {
-      alert("You sassing me with that?");
+        alert("You sassing me with that?");
+    } else if (inputValue == null) {
+        txt = "";
     } else {
-      document.getElementById("charCard").appendChild(li);
+        document.getElementById("charCard").appendChild(li);
     }
 
     var span = document.createElement("SPAN");
@@ -59,10 +53,10 @@ function newCharLine(){
     span.appendChild(txt);
     li.appendChild(span);
   
-    for (i = 0; i < close.length; i++) {
+    for (i = 1; i < close.length; i++) {
       close[i].onclick = function() {
         var div = this.parentElement;
-        div.style.display = "none";
+        div.parentNode.removeChild(div);
       }
     }
 }
