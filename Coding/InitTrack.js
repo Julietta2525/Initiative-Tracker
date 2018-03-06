@@ -8,7 +8,18 @@ function newPlayerButton() {
 }
 
 function addEditButton () {
-    var ul = document.getElementById
+   // Create an "edit" button and append it to each list item
+   var myNodelist = document.getElementsByTagName("LI");
+   var i;
+   for (i = 0; i < myNodelist.length; i++) {
+        var span = document.createElement("SPAN");
+        var pencil = document.createElement("IMG");
+        span.className = "edit";
+        pencil.className = "pencil";
+        span.appendChild(pencil);
+        document.getElementById("pencil").src = "pencil.png";
+        myNodelist[i].appendChild(span);
+    } 
 }
 
 function addCloseButtons() {
