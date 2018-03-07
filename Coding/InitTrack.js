@@ -1,10 +1,17 @@
 function loadingStuff () {
     addCloseButtons();
+    addEditButton();
+    newIdNameEdit();
 }
 
 function newPlayerButton() {
     newCharLine();
     addCloseButtons();
+    newIdNameEdit();
+}
+
+function newIdNameEdit () {
+    document.getElementsByClassName("LI").id= "nameDisplay";
 }
 
 function addEditButton () {
@@ -13,13 +20,22 @@ function addEditButton () {
    var i;
    for (i = 0; i < myNodelist.length; i++) {
         var span = document.createElement("SPAN");
-        var pencil = document.createElement("IMG");
+        var txt = document.createTextNode("Edit");
         span.className = "edit";
-        pencil.className = "pencil";
-        span.appendChild(pencil);
-        document.getElementById("pencil").src = "pencil.png";
+        span.appendChild(txt);
         myNodelist[i].appendChild(span);
-    } 
+    }
+// Click on a edit button to bring up new input box
+    var inputBox = document.createElement("input");
+    var oldName = document.getElementById("nameDisplay").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+    alert("You must write something!");
+    } else {
+    document.getElementById("myUL").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
 }
 
 function addCloseButtons() {

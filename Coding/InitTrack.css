@@ -227,13 +227,18 @@ ul li {
   .edit {
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 0;
     padding: 12px 16px 12px 16px;
+    font-size: 15px;
   }
   
   .edit:hover {
     color: rgb(223, 7, 115);
     background-color: transparent;
+  }
+
+  .nameDisplay {
+      color: yellow;
   }
 
 .nameInputContainer {
