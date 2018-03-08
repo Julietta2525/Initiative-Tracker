@@ -1,17 +1,15 @@
 function loadingStuff () {
     addCloseButtons();
     addEditButton();
-    newIdNameEdit();
 }
 
 function newPlayerButton() {
     newCharLine();
     addCloseButtons();
-    newIdNameEdit();
 }
 
 function newIdNameEdit () {
-    document.getElementsByClassName("LI").className= "nameDisplay";
+    document.getElementsByClassName("LI").className = "nameDisplay";
 }
 
 function addEditButton () {
@@ -22,32 +20,15 @@ function addEditButton () {
         var span = document.createElement("SPAN");
         var txt = document.createTextNode("Edit");
         span.className = "edit";
-        txt.className = "nameDisplay";
         span.appendChild(txt);
         myNodelist[i].appendChild(span);
     }
-    var edit = document.getElementsByClassName("edit");
-    var i;
-    for (i = 0; i < edit.length; i++) {
-        edit[i].onclick = function() {
-            var inputBox = document.createElement("input");
-            inputBox.className = "newName";
-            var oldName = document.getElementsByClassName("nameDisplay").value;
-            var newNameDisplay = document.getElementsByClassName("newName").value;
-            var t = document.createTextNode(newNameDisplay);
-            li.appendChild(t);
-            if (newNameDisplay === '') {
-                document.getElementById("nameDisplay");
-            } else {
-                document.getElementById("charCard").appendChild(li);
-            }
-                document.getElementById("newNameDisplay").value = "";
-        }
-    }
+    var list = document.querySelector(".edit");
+    list.addEventListener("click", editBox);
 }
 
 function addCloseButtons() {
-// Create a "close" button and append it to each list item
+    // Create a "close" button and append it to each list item
     var myNodelist = document.getElementsByTagName("LI");
     var i;
     for (i = 0; i < myNodelist.length; i++) {
@@ -57,7 +38,7 @@ function addCloseButtons() {
         span.appendChild(txt);
         myNodelist[i].appendChild(span);
         }
-// Click on a close button to hide the current list item
+    // Click on a close button to hide the current list item
     var close = document.getElementsByClassName("close");
     var i;
     for (i = 0; i < close.length; i++) {
@@ -81,7 +62,7 @@ function newCharLine(){
     } else {
         document.getElementById("charCard").appendChild(li);
     }
-
+//add close button
     var span = document.createElement("SPAN");
     var txt = document.createTextNode("\u00D7");
     span.className = "close";
@@ -94,8 +75,32 @@ function newCharLine(){
         div.parentNode.removeChild(div);
       }
     }
+//add edit button
+    var div = document.createElement("div");
+    var txt = document.createTextNode("Edit");
+    div.className = "edit";
+    div.appendChild(txt);
+    li.appendChild(div);
+    var editClick = document.querySelectorAll(".edit");
+    var i;
+    for (i = 1; i < editClick.length; i++) {
+        editClick[i].addEventListener("click", editBox);
+    }
 }
 
+function editBox() {
+    var li = document.createElement("li");
+    var newName = prompt("Enter new name", "");
+    var t = document.createTextNode(newName);
+    li.appendChild(t);
+    if (newName === '') {
+        alert("You sassing me with that?");
+    } else if (newName == null) {
+        txt = "";
+    } else {
+        document.getElementsByClassName("charCard").appendChild(li);
+    }
+}
 
 
 

@@ -216,26 +216,36 @@ ul li {
     position: absolute;
     left: 0;
     top: 0;
+    cursor: pointer;
     padding: 12px 16px 12px 16px;
-  }
+}
   
-  .close:hover {
+.close:hover {
     color: rgb(223, 7, 115);
     background-color: transparent;
-  }
+}
 
-  .edit {
+.edit {
     position: absolute;
     right: 0;
     top: 0;
     padding: 12px 16px 12px 16px;
     font-size: 15px;
-  }
+    cursor: pointer;
+}
   
-  .edit:hover {
+.edit:hover {
     color: rgb(223, 7, 115);
     background-color: transparent;
-  }
+}
+
+/*input {
+    border: none;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}*/
 
   .nameDisplay {
       color: yellow;
