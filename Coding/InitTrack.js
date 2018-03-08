@@ -62,6 +62,7 @@ function newCharLine(){
     } else {
         document.getElementById("charCard").appendChild(li);
     }
+    li.className = "nameDisplay";
 //add close button
     var span = document.createElement("SPAN");
     var txt = document.createTextNode("\u00D7");
@@ -89,20 +90,48 @@ function newCharLine(){
 }
 
 function editBox() {
-    var li = document.createElement("li");
-    var newName = prompt("Enter new name", "");
-    var t = document.createTextNode(newName);
-    li.appendChild(t);
-    if (newName === '') {
-        alert("You sassing me with that?");
-    } else if (newName == null) {
-        txt = "";
-    } else {
-        document.getElementsByClassName("charCard").appendChild(li);
+    //create input box
+    var inputBox = document.createElement("INPUT");
+    inputBox.setAttribute("type", "text");
+    inputBox.className = "newInput";
+    document.getElementById("charCard").appendChild(inputBox);
+
+    //create confirm button
+    var confirmButton = document.createElement("BUTTON");
+    var buttonText = document.createTextNode("OK");
+    confirmButton.className = "confirmButton";
+    confirmButton.appendChild(buttonText);
+    document.getElementById("charCard").appendChild(confirmButton);
+    confirmButton.onclick = function() {
+        var elmnt = document.createElement("li");
+        var textnode = document.createTextNode(newName);
+        var oldName = document.getElementById("charCard");
+        var newName = document.getElementsByClassName("newInput").value
+    
+        elmnt.className="nameDisplay"
+        elmnt.appendChild(textnode);
+        oldName.replaceChild(elmnt, oldName.childNodes[0]);
     }
+
+    //create cancel button
+    var cancelButton = document.createElement("BUTTON");
+    var buttonText = document.createTextNode("Cancel");
+    cancelButton.className = "cancelButton";
+    cancelButton.appendChild(buttonText);
+    document.getElementById("charCard").appendChild(cancelButton);
+
+    document.getElementsByClassName("cancelButton").addEventListener("click", cancelButtonClick);
 }
 
-
+function cancelButtonClick () {
+    var inputBox = document.getElementsByTagName("input");
+    var cancelButton = document.getElementsByClassName("cancelButton");
+    var confirmParent = document.getElementById("charCard");
+    var confirmChild = document.getElementsByClassName("confirmButton");
+    confirmParent.removeChild(confirmChild);
+    inputBox.parentNode.removeChild(inputBox);
+    cancelButton.style.visibility = "hidden";
+}
 
 //SUPER HELPFUL TODO LIST SITE!!!
 //https://codepen.io/jaballadares/pen/Hwebq
