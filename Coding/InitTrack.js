@@ -11,7 +11,7 @@ function newPlayerButton() {
 }
 
 function newIdNameEdit () {
-    document.getElementsByClassName("LI").id= "nameDisplay";
+    document.getElementsByClassName("LI").className= "nameDisplay";
 }
 
 function addEditButton () {
@@ -22,20 +22,28 @@ function addEditButton () {
         var span = document.createElement("SPAN");
         var txt = document.createTextNode("Edit");
         span.className = "edit";
+        txt.className = "nameDisplay";
         span.appendChild(txt);
         myNodelist[i].appendChild(span);
     }
-// Click on a edit button to bring up new input box
-    var inputBox = document.createElement("input");
-    var oldName = document.getElementById("nameDisplay").value;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(t);
-    if (inputValue === '') {
-    alert("You must write something!");
-    } else {
-    document.getElementById("myUL").appendChild(li);
+    var edit = document.getElementsByClassName("edit");
+    var i;
+    for (i = 0; i < edit.length; i++) {
+        edit[i].onclick = function() {
+            var inputBox = document.createElement("input");
+            inputBox.className = "newName";
+            var oldName = document.getElementsByClassName("nameDisplay").value;
+            var newNameDisplay = document.getElementsByClassName("newName").value;
+            var t = document.createTextNode(newNameDisplay);
+            li.appendChild(t);
+            if (newNameDisplay === '') {
+                document.getElementById("nameDisplay");
+            } else {
+                document.getElementById("charCard").appendChild(li);
+            }
+                document.getElementById("newNameDisplay").value = "";
+        }
     }
-    document.getElementById("myInput").value = "";
 }
 
 function addCloseButtons() {
