@@ -90,48 +90,59 @@ function newCharLine(){
 }
 
 function editBox() {
-    //create input box
-    var inputBox = document.createElement("INPUT");
-    inputBox.setAttribute("type", "text");
-    inputBox.className = "newInput";
-    document.getElementById("charCard").appendChild(inputBox);
+    var list = document.querySelector("ul");
+    var editlist = document.querySelector("nameDisplay");
+    list.contentEditable = true;
 
-    //create confirm button
-    var confirmButton = document.createElement("BUTTON");
-    var buttonText = document.createTextNode("OK");
-    confirmButton.className = "confirmButton";
-    confirmButton.appendChild(buttonText);
-    document.getElementById("charCard").appendChild(confirmButton);
-    confirmButton.onclick = function() {
-        var elmnt = document.createElement("li");
-        var textnode = document.createTextNode(newName);
-        var oldName = document.getElementById("charCard");
-        var newName = document.getElementsByClassName("newInput").value
+//var modal = document.getElementById("myModal");
+/////var span = document.getElementsByClassName("cancelButton")[0];
+
+//modal.style.display = "block";
+//window.onclick = function(event) { 
+    //if (event.target == modal) {
+        //modal.style.display = "none";
+    //}
+//}
+
+//create input box
+    //var inputBox = document.createElement("INPUT");
+    //inputBox.setAttribute("type", "text");
+    //inputBox.className = "newInput";
+    //document.getElementById("charCard").appendChild(inputBox);
+
+//create confirm button
+    //var confirmButton = document.createElement("BUTTON");
+    //var buttonText = document.createTextNode("OK");
+    //confirmButton.className = "confirmButton";
+    //confirmButton.appendChild(buttonText);
+    //document.getElementById("charCard").appendChild(confirmButton);
+    //confirmButton.onclick = function() {
+        //var elmnt = document.createElement("li");
+        //var textnode = document.createTextNode(newName);
+        //var oldName = document.getElementById("charCard");
+        //var newName = document.getElementsByClassName("newInput").value
     
-        elmnt.className="nameDisplay"
-        elmnt.appendChild(textnode);
-        oldName.replaceChild(elmnt, oldName.childNodes[0]);
-    }
+        //elmnt.className="nameDisplay"
+        //elmnt.appendChild(textnode);
+        //oldName.replaceChild(elmnt, oldName.childNodes[0]);
+        //var newName = document.getElementsByClassName("newInput").value;
+        //var oldName = document.getElementsByClassName("nameDisplay").value;
+        //oldName.innerHTML = newName;
+        //}
 
-    //create cancel button
-    var cancelButton = document.createElement("BUTTON");
-    var buttonText = document.createTextNode("Cancel");
-    cancelButton.className = "cancelButton";
-    cancelButton.appendChild(buttonText);
-    document.getElementById("charCard").appendChild(cancelButton);
-
-    document.getElementsByClassName("cancelButton").addEventListener("click", cancelButtonClick);
+//create cancel button
+    //var cancelButton = document.createElement("BUTTON");
+    //var buttonText = document.createTextNode("Cancel");
+    //cancelButton.className = "cancelButton";
+    //cancelButton.appendChild(buttonText);
+    //document.getElementById("charCard").appendChild(cancelButton);
+    //cancelButton.onclick = function() {
+        //document.getElementsByClassName("newInput").style.display = "collapse";
+        //document.getElementsByClassName("cancelButton").style.display = "none";
+        //document.getElementsByClassName("confirmButton").style.display = "none";
+    //}
 }
 
-function cancelButtonClick () {
-    var inputBox = document.getElementsByTagName("input");
-    var cancelButton = document.getElementsByClassName("cancelButton");
-    var confirmParent = document.getElementById("charCard");
-    var confirmChild = document.getElementsByClassName("confirmButton");
-    confirmParent.removeChild(confirmChild);
-    inputBox.parentNode.removeChild(inputBox);
-    cancelButton.style.visibility = "hidden";
-}
 
 //SUPER HELPFUL TODO LIST SITE!!!
 //https://codepen.io/jaballadares/pen/Hwebq
